@@ -6,6 +6,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.0
+	github.com/thoas/go-funk v0.9.3
 	github.com/urfave/cli/v2 v2.25.1
 	github.com/x-cray/logrus-prefixed-formatter v0.5.2
 	k8s.io/api v0.27.0

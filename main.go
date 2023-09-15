@@ -101,6 +101,28 @@ func run(args []string) error {
 			},
 			Action: cmd.EnableWorkloads,
 		},
+		{
+			Name:  "enable-workloads",
+			Usage: "Set 1 replica on all deployment and statefullset on provided namespace",
+			Flags: []cli.Flag{
+				&cli.StringSliceFlag{
+					Name:     "exclude-namespaces",
+					Usage:    "The exclude namespaces",
+					Required: false,
+				},
+				&cli.StringSliceFlag{
+					Name:     "include-namespaces",
+					Usage:    "The include namespaces",
+					Required: false,
+				},
+			},
+			Action: cmd.EnableWorkloads,
+		},
+		{
+			Name:   "get-nodes-to-reboot",
+			Usage:  "Get the list of nodes to reboot",
+			Action: cmd.GetNodesToReboot,
+		},
 	}
 
 	app.Before = func(c *cli.Context) error {
